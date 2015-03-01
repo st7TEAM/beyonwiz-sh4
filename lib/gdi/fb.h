@@ -69,6 +69,11 @@ public:
 	int lock();
 	void unlock();
 	int islocked() {
-};
+#ifdef DEBUG_FB
+                eDebug("[fbClass] %s", __FUNCTION__);
+#endif
+                return locked;
+	}        
+};        
 
 #endif
